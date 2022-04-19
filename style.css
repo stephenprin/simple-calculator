@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca:wght@300;400;500;600&family=Outfit:wght@300;400;600&family=Poppins:wght@100;200;300;700;800&family=Roboto:wght@100;300;400;500;700;900&family=Rubik:wght@300;400;500;600&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+body {
+  background-color: beige;
+  font-family: "Roboto", sans-serif;
+}
+:root {
+  --container-color: rgb(73, 117, 248);
+  --shadow-box: rgb(115, 149, 252);
+  --container-layout: 22rem;
+  --font-color: rgb(216, 213, 213);
+}
+.container {
+  background-color: var(--container-color);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.calculator {
+  box-shadow: 2px 2px 12px var(--shadow-box);
+  padding: 2rem;
+  border-radius: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(4, 4rem);
+}
+.calculator h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.7rem;
+  color: antiquewhite;
+  word-spacing: 0.9%;
+  opacity: 0.8;
+}
+.calculator input {
+  grid-column: span 4;
+  box-shadow: inset -6px 6px 13px var(--container-color),
+    inset 6px 13px 13px rgba(0, 0, 0, 0.2),
+    inset -15px 13px 13px rgba(105, 27, 27, 0.2);
+  width: 17rem;
+  height: 4rem;
+  background-color: var(--container-color);
+  border: none;
+  border-bottom: 1px solid white;
+  border-radius: 2rem;
+  font-size: 2rem;
+  color: white;
+  margin: 0.5rem;
+  padding: 1rem;
+  text-align: end;
+}
+span {
+  box-shadow: inset 6px 6px 13px var(--container-color),
+    6px 6px 13px rgba(0, 0, 0, 0.2);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0.8rem 0.8rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 400ms ease;
+}
+span:hover {
+  transform: scale(1.09);
+  color: white;
+}
+.equal {
+  width: 120px;
+  border-radius: 42px;
+  font-size: 1.4rem;
+  box-shadow: inset 6px 6px 13px whitesmoke, 6px 6px 13px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  color: black;
+}
+.equal:hover {
+  color: black;
+}
